@@ -35,11 +35,9 @@
   },
   "devDependencies": {
     "@kie-tools/image-env-to-json": "workspace:*",
-    "@kie-tools/python-venv": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
     "@kie-tools/sonataflow-image-common": "workspace:*",
     "@kie-tools/sonataflow-management-console-image": "workspace:*",
-    "@kie-tools/sonataflow-management-console-image-env": "workspace:*",
     "@kie-tools/sonataflow-management-console-webapp": "workspace:*",
     "@osl/osl-images-modules": "workspace:*",
     "@osl/redhat-env": "workspace:*",

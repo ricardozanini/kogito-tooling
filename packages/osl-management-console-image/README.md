@@ -18,7 +18,7 @@ Export the following variables before running it:
 export KIE_TOOLS_BUILD__buildContainerImages=true
 # The SonataFlow Management Console WebApp artifact in zip format
 export OSL_MANAGEMENT_CONSOLE_IMAGE__artifactUrl=<artifact URL>
-# Image name/tag information. This information is optional, you can see the package sonataflow-management-console-image-env for the default values.
+# Image name/tag information. This information is optional, you can see the env/index.js for the default values.
 export OSL_MANAGEMENT_CONSOLE_IMAGE__registry=registry.access.redhat.com
 export OSL_MANAGEMENT_CONSOLE_IMAGE__account=openshift-serverless-1
 export OSL_MANAGEMENT_CONSOLE_IMAGE__name=logic-management-console-rhel8

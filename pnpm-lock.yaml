@@ -7264,9 +7264,6 @@ importers:
       '@kie-tools/image-env-to-json':
         specifier: workspace:*
         version: link:../image-env-to-json
-      '@kie-tools/python-venv':
-        specifier: workspace:*
-        version: link:../python-venv
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -7276,9 +7273,6 @@ importers:
       '@kie-tools/sonataflow-management-console-image':
         specifier: workspace:*
         version: link:../sonataflow-management-console-image
-      '@kie-tools/sonataflow-management-console-image-env':
-        specifier: workspace:*
-        version: link:../sonataflow-management-console-image-env
       '@kie-tools/sonataflow-management-console-webapp':
         specifier: workspace:*
         version: link:../sonataflow-management-console-webapp
