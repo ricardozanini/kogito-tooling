@@ -23,12 +23,12 @@ description: "OpenShift Serverless Logic builder module with required extensions
 
 artifacts:
   - name: kogito-builder-quarkus-app
-    description: "kogito-builder-quarkus-app-9.101.0.redhat-00007-image-build"
-    md5: "557fcbc3d245219134ba455a8992eae8"
+    description: "## UPDATED DURING BUILD ##"
+    md5: "## UPDATED DURING BUILD ##"
     target: kogito-builder-quarkus-app-image-build.zip
   - name: kogito-builder-maven-repository
-    description: "kogito-builder-maven-repository-9.101.0.redhat-00007-image-build"
-    md5: "b499bc49cee16d4ab9048299820be0d4"
+    description: "## UPDATED DURING BUILD ##"
+    md5: "## UPDATED DURING BUILD ##"
     target: kogito-builder-maven-repository-image-build.zip
 
 execute:
