@@ -24,7 +24,7 @@ module.exports = composeEnv([rootEnv], {
   vars: varsWithName({
     OSL__branchName: {
       default: "main",
-      description: "OpenShift Serverless Logic Branch Name for OSDS",
+      description: "OpenShift Serverless Logic Branch Name for OSBS",
     },
   }),
   get env() {
