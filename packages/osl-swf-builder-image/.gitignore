@@ -1,5 +1,5 @@
-!dist
-dist/scripts
-dist/tests
-dist/Makefile
-dist/modules/**/tests
+!generated
+generated/scripts
+generated/tests
+generated/Makefile
+generated/modules/**/tests
