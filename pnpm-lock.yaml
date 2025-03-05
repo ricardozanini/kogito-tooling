@@ -32875,21 +32875,21 @@ snapshots:
   '@babel/generator@7.21.5':
     dependencies:
       '@babel/types': 7.23.9
-      '@jridgewell/gen-mapping': 0.3.3
+      '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.18
       jsesc: 2.5.2
 
   '@babel/generator@7.23.0':
     dependencies:
       '@babel/types': 7.23.9
-      '@jridgewell/gen-mapping': 0.3.3
+      '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
 
   '@babel/generator@7.23.6':
     dependencies:
       '@babel/types': 7.23.9
-      '@jridgewell/gen-mapping': 0.3.3
+      '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
 
@@ -38948,19 +38948,19 @@ snapshots:
 
   '@babel/types@7.21.5':
     dependencies:
-      '@babel/helper-string-parser': 7.23.4
+      '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
   '@babel/types@7.23.0':
     dependencies:
-      '@babel/helper-string-parser': 7.23.4
+      '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
   '@babel/types@7.23.9':
     dependencies:
-      '@babel/helper-string-parser': 7.23.4
+      '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
