@@ -96,9 +96,6 @@
       { "id": "@kie-tools-examples/uniforms-patternfly" },
       { "id": "@kie-tools/uniforms-patternfly" },
       { "id": "@kie-tools/jest-base" },
-      { "id": "@kie-tools-core/backend" },
-      { "id": "@kie-tools-core/i18n" },
-      { "id": "@kie-tools-core/workspace" },
       { "id": "@kie-tools/boxed-expression-component" },
       { "id": "@kie-tools-core/operating-system" },
       { "id": "@kie-tools/feel-input-component" },
@@ -142,7 +139,9 @@
       { "id": "@kie-tools/dashbuilder-viewer" },
       { "id": "@kie-tools/dashbuilder-viewer-deployment-webapp" },
       { "id": "@kie-tools-core/workspaces-git-fs" },
+      { "id": "@kie-tools-core/workspace" },
       { "id": "@kie-tools/kie-sandbox-fs" },
+      { "id": "@kie-tools-core/i18n" },
       { "id": "@kie-tools/dashbuilder-viewer-image" },
       { "id": "@kie-tools/dashbuilder-viewer-image-env" },
       { "id": "@kie-tools/data-index-webapp" },
@@ -897,31 +896,6 @@
         "weight": 1
       },
       {
-        "source": "@kie-tools-core/backend",
-        "target": "@kie-tools-core/notifications",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-core/i18n",
-        "target": "@kie-tools/eslint",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-core/i18n",
-        "target": "@kie-tools/jest-base",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-core/i18n",
-        "target": "@kie-tools/tsconfig",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-core/workspace",
-        "target": "@kie-tools-core/operating-system",
-        "weight": 1
-      },
-      {
         "source": "@kie-tools/boxed-expression-component",
         "target": "@kie-tools-core/operating-system",
         "weight": 1
@@ -1497,12 +1471,32 @@
         "weight": 1
       },
       {
+        "source": "@kie-tools-core/workspace",
+        "target": "@kie-tools-core/operating-system",
+        "weight": 1
+      },
+      {
         "source": "@kie-tools/kie-sandbox-fs",
         "target": "@kie-tools/root-env",
         "weight": 1
       },
       {
         "source": "@kie-tools/kie-sandbox-fs",
+        "target": "@kie-tools/tsconfig",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools-core/i18n",
+        "target": "@kie-tools/eslint",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools-core/i18n",
+        "target": "@kie-tools/jest-base",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools-core/i18n",
         "target": "@kie-tools/tsconfig",
         "weight": 1
       },
@@ -3019,7 +3013,6 @@
     ],
     ["@kie-tools-examples/sonataflow-greeting", "examples/sonataflow-greeting"],
     ["@kie-tools-examples/uniforms-patternfly", "examples/uniforms-patternfly"],
-    ["@kie-tools-core/backend", "packages/backend"],
     ["@kie-tools/boxed-expression-component", "packages/boxed-expression-component"],
     ["@kie-tools/bpmn-marshaller", "packages/bpmn-marshaller"],
     ["bpmn-vscode-extension", "packages/bpmn-vscode-extension"],

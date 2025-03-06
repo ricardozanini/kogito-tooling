@@ -1734,91 +1734,6 @@ importers:
         specifier: ^5.9.0
         version: 5.9.0
 
-  packages/backend:
-    dependencies:
-      '@kie-tools-core/i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@kie-tools-core/notifications':
-        specifier: workspace:*
-        version: link:../notifications
-      '@kie-tools-core/workspace':
-        specifier: workspace:*
-        version: link:../workspace
-      axios:
-        specifier: ^1.7.4
-        version: 1.7.4
-      fast-xml-parser:
-        specifier: ^4.4.1
-        version: 4.4.1
-      portfinder:
-        specifier: ^1.0.32
-        version: 1.0.32
-      semver:
-        specifier: ^7.5.4
-        version: 7.6.3
-      sinon:
-        specifier: ^11.1.1
-        version: 11.1.2
-    devDependencies:
-      '@babel/core':
-        specifier: ^7.16.0
-        version: 7.26.0
-      '@babel/preset-env':
-        specifier: ^7.16.0
-        version: 7.24.7(@babel/core@7.26.0)
-      '@babel/preset-react':
-        specifier: ^7.16.0
-        version: 7.22.15(@babel/core@7.26.0)
-      '@kie-tools/eslint':
-        specifier: workspace:*
-        version: link:../eslint
-      '@kie-tools/jest-base':
-        specifier: workspace:*
-        version: link:../jest-base
-      '@kie-tools/root-env':
-        specifier: workspace:*
-        version: link:../root-env
-      '@kie-tools/tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      '@types/jest':
-        specifier: ^29.5.12
-        version: 29.5.12
-      '@types/jest-when':
-        specifier: ^3.5.5
-        version: 3.5.5
-      '@types/semver':
-        specifier: ^7.5.2
-        version: 7.5.8
-      '@types/sinon':
-        specifier: ^10.0.2
-        version: 10.0.20
-      '@types/vscode':
-        specifier: 1.67.0
-        version: 1.67.0
-      jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@22.10.7)(node-notifier@8.0.2)(ts-node@10.9.2(@types/node@22.10.7)(typescript@5.5.3))
-      jest-junit:
-        specifier: ^16.0.0
-        version: 16.0.0
-      jest-when:
-        specifier: ^3.6.0
-        version: 3.6.0(jest@29.7.0(@types/node@22.10.7)(node-notifier@8.0.2)(ts-node@10.9.2(@types/node@22.10.7)(typescript@5.5.3)))
-      rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
-      stream:
-        specifier: ^0.0.2
-        version: 0.0.2
-      ts-jest:
-        specifier: ^29.1.5
-        version: 29.1.5(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.7)(node-notifier@8.0.2)(ts-node@10.9.2(@types/node@22.10.7)(typescript@5.5.3)))(typescript@5.5.3)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.5.3
-
   packages/boxed-expression-component:
     dependencies:
       '@kie-tools-core/i18n':
@@ -52473,7 +52388,7 @@ snapshots:
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
-      micromatch: 4.0.8
+      micromatch: 4.0.5
       parse-json: 5.2.0
       pretty-format: 29.7.0
       slash: 3.0.0
@@ -58572,7 +58487,7 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
       '@types/node': 22.10.7
-      acorn: 8.10.0
+      acorn: 8.12.1
       acorn-walk: 8.2.0
       arg: 4.1.0
       create-require: 1.1.1
