@@ -53,16 +53,6 @@ export const availableModels: TestScenarioEditor.ExternalDmn[] = [
     svg: "",
     normalizedPosixPathRelativeToTheOpenFile: "dev-webapp/available-dmn-models/traffic-violation.dmn",
   },
-  {
-    model: normalize(getMarshaller(SIMPLE, { upgradeTo: "latest" }).parser.parse()),
-    svg: "",
-    normalizedPosixPathRelativeToTheOpenFile: "dev-webapp/available-dmn-models/simple.dmn",
-  },
-  {
-    model: normalize(getMarshaller(EMPTY, { upgradeTo: "latest" }).parser.parse()),
-    svg: "",
-    normalizedPosixPathRelativeToTheOpenFile: "dev-webapp/available-dmn-models/empty.dmn",
-  },
 ];
 
 export const availableModelsByPath: Record<string, TestScenarioEditor.ExternalDmn> = Object.values(
