@@ -28,4 +28,6 @@ data:
     -Djava.util.logging.manager=org.jboss.logmanager.LogManager\"\nENV JAVA_APP_JAR=\"/deployments/quarkus-run.jar\"\n"
 kind: ConfigMap
 metadata:
+  labels:
+    app.kubernetes.io/name: sonataflow-operator
   name: logic-operator-rhel8-builder-config
