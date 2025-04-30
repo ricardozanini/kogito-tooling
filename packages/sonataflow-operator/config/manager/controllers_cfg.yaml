@@ -25,7 +25,7 @@ kanikoDefaultWarmerImageTag: gcr.io/kaniko-project/warmer:v1.9.0
 # Default image used internally by the Operator Managed Kaniko builder to create the executor pods
 kanikoExecutorImageTag: gcr.io/kaniko-project/executor:v1.9.0
 # The Jobs Service image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-jobsServicePostgreSQLImageTag: "openshift-serverless-logic-jobs-service-postgresql-rhel8"
+jobsServicePostgreSQLImageTag: "openshift-serverless-logic-jobs-service-postgresql-rhel8:1.36.0"
 jobsServiceEphemeralImageTag: "openshift-serverless-logic-jobs-service-ephemeral-rhel8"
 # The Data Index image to use, if empty the operator will use the default Apache Community one based on the current operator's version
 dataIndexPostgreSQLImageTag: "openshift-serverless-logic-data-index-postgresql-rhel8"

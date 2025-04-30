@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-FROM openshift-serverless-logic-swf-builder-rhel8 AS builder
+FROM openshift-serverless-logic-swf-builder-rhel8:1.36.0 AS builder
 
 # variables that can be overridden by the builder
 # To add a Quarkus extension to your application
