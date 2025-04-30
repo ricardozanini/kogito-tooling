@@ -28,11 +28,11 @@ data:
     # Default image used internally by the Operator Managed Kaniko builder to create the executor pods
     kanikoExecutorImageTag: gcr.io/kaniko-project/executor:v1.9.0
     # The Jobs Service image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-    jobsServicePostgreSQLImageTag: "openshift-serverless-logic-jobs-service-postgresql-rhel8"
-    jobsServiceEphemeralImageTag: "openshift-serverless-logic-jobs-service-ephemeral-rhel8"
+    jobsServicePostgreSQLImageTag: "openshift-serverless-logic-jobs-service-postgresql-rhel8:1.36.0"
+    jobsServiceEphemeralImageTag: "openshift-serverless-logic-jobs-service-ephemeral-rhel8:1.36.0"
     # The Data Index image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-    dataIndexPostgreSQLImageTag: "openshift-serverless-logic-data-index-postgresql-rhel8"
-    dataIndexEphemeralImageTag: "openshift-serverless-logic-data-index-ephemeral-rhel8"
+    dataIndexPostgreSQLImageTag: "openshift-serverless-logic-data-index-postgresql-rhel8:1.36.0"
+    dataIndexEphemeralImageTag: "openshift-serverless-logic-data-index-ephemeral-rhel8:1.36.0"
     # The Kogito PostgreSQL DB Migrator image to use (TBD: to replace with apache image)
     dbMigratorToolImageTag: "docker.io/apache/kie-kogito-db-migrator-tool:1.36.0"
     # SonataFlow base builder image used in the internal Dockerfile to build workflow applications in preview profile
