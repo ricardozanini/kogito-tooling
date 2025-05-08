@@ -28,7 +28,7 @@
     "manifests:copy": "pnpm manifests:copy:operator && pnpm manifests:copy:resources",
     "manifests:copy:operator": "OP_PATH=node_modules/@kie-tools/sonataflow-operator && cp -R ${OP_PATH}/config generated/ && cp -R ${OP_PATH}/bin generated/ && mkdir -p generated/bundle/manifests && cp ${OP_PATH}/bundle/manifests/sonataflow.org_sonataflow* generated/bundle/manifests/ && rm -rf generated/config/manifests/bases/*.yaml && cp ${OP_PATH}/Makefile generated/ && cp -R ${OP_PATH}/hack generated/ && cp ${OP_PATH}/PROJECT generated/",
     "manifests:copy:resources": "cp -R resources/config generated/",
-    "manifests:update": ". ./node_modules/@osl/redhat-python-venv/venv/bin/activate && python resources/scripts/update_manifests.py logic-operator-system logic-operator-rhel8"
+    "manifests:update": ". ./node_modules/@osl/redhat-python-venv/venv/bin/activate && python resources/scripts/update_manifests.py $(build-env oslOperatorBundleImage.namespace) $(build-env oslOperatorBundleImage.namePrefix) $(build-env oslOperatorBundleImage.proxyImage)"
   },
   "devDependencies": {
     "@kie-tools/root-env": "workspace:*",

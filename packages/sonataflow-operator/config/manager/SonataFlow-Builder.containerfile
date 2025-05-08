@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-FROM docker.io/apache/incubator-kie-sonataflow-builder:main AS builder
+FROM registry.redhat.io/openshift-serverless-1/logic-swf-builder-rhel8:1.36.0 AS builder
 
 # variables that can be overridden by the builder
 # To add a Quarkus extension to your application
