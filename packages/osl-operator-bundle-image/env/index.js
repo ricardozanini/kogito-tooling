@@ -65,12 +65,6 @@ module.exports = composeEnv([rootEnv, redHatEnv, sonataflowOperatorEnv], {
         proxyImage: getOrDefault(this.vars.OSL_OPERATOR_BUNDLE__proxyImage),
         namespace: getOrDefault(this.vars.OSL_OPERATOR_BUNDLE__namespace),
         namePrefix: getOrDefault(this.vars.OSL_OPERATOR_BUNDLE__namePrefix),
-        operator: {
-          registry: getOrDefault(sonataflowOperatorEnv.env.sonataFlowOperator.registry),
-          account: getOrDefault(sonataflowOperatorEnv.env.sonataFlowOperator.account),
-          name: getOrDefault(sonataflowOperatorEnv.env.sonataFlowOperator.name),
-          buildTag: getOrDefault(sonataflowOperatorEnv.env.sonataFlowOperator.buildTag),
-        },
       },
     };
   },
