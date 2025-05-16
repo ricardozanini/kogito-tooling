@@ -151,9 +151,6 @@
       { "id": "@kie-tools/form-dmn" },
       { "id": "@kie-tools/form" },
       { "id": "@kie-tools/dev-deployment-dmn-form-webapp-image" },
-      { "id": "@kie-tools/dev-deployment-kogito-quarkus-blank-app" },
-      { "id": "@kie-tools/dev-deployment-kogito-quarkus-blank-app-image" },
-      { "id": "@kie-tools/maven-m2-repo-via-http-image" },
       { "id": "@kie-tools/dmn-feel-antlr4-parser" },
       { "id": "@kie-tools/dmn-marshaller" },
       { "id": "@kie-tools/dmn-marshaller-backend-compatibility-tester" },
@@ -164,7 +161,6 @@
       { "id": "dmn-vscode-extension" },
       { "id": "@kie-tools/scesim-editor-envelope" },
       { "id": "@kie-tools/scesim-editor" },
-      { "id": "@kie-tools/extended-services" },
       { "id": "@kie-tools/extended-services-java" },
       { "id": "extended-services-vscode-extension" },
       { "id": "@kie-tools/form-code-generator" },
@@ -179,14 +175,9 @@
       { "id": "@kie-tools/pmml-editor" },
       { "id": "@kie-tools/vscode-extension-common-test-helpers" },
       { "id": "@kie-tools/kie-editors-standalone" },
-      { "id": "@kie-tools/kie-sandbox-accelerator-quarkus" },
-      { "id": "@kie-tools/kie-sandbox-distribution" },
       { "id": "@kie-tools/kie-sandbox-extended-services-image" },
-      { "id": "@kie-tools/kie-sandbox-webapp-image" },
-      { "id": "@kie-tools/online-editor" },
       { "id": "@kie-tools/kie-sandbox-helm-chart" },
-      { "id": "@kie-tools-core/kubernetes-bridge" },
-      { "id": "@kie-tools/unitables-dmn" },
+      { "id": "@kie-tools/kie-sandbox-webapp-image" },
       { "id": "@kie-tools/kn-plugin-workflow" },
       { "id": "@kie-tools/sonataflow-operator" },
       { "id": "@kie-tools/kogito-db-migrator-tool-image" },
@@ -202,7 +193,8 @@
       { "id": "@kie-tools/kogito-db-migrator-tool" },
       { "id": "@kie/kogito-jit-runner-image" },
       { "id": "@kie/kogito-jobs-service-allinone-image" },
-      { "id": "@kie-tools/unitables" },
+      { "id": "@kie-tools-core/kubernetes-bridge" },
+      { "id": "@kie-tools/maven-m2-repo-via-http-image" },
       { "id": "@osl/osl-data-index-ephemeral-image" },
       { "id": "@osl/osl-images-modules" },
       { "id": "@osl/redhat-env" },
@@ -252,6 +244,8 @@
       { "id": "@kie-tools/serverless-workflow-jq-expressions" },
       { "id": "@kie-tools/serverless-workflow-service-catalog" },
       { "id": "swf-vscode-extension" },
+      { "id": "@kie-tools/unitables" },
+      { "id": "@kie-tools/unitables-dmn" },
       { "id": "vscode-extension-dashbuilder-editor" },
       { "id": "vscode-extension-kie-ba-bundle" },
       { "id": "vscode-extension-kogito-bundle" },
@@ -1586,36 +1580,6 @@
         "weight": 1
       },
       {
-        "source": "@kie-tools/dev-deployment-kogito-quarkus-blank-app",
-        "target": "@kie-tools/jbpm-quarkus-devui",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/dev-deployment-kogito-quarkus-blank-app-image",
-        "target": "@kie-tools/dev-deployment-base-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/dev-deployment-kogito-quarkus-blank-app-image",
-        "target": "@kie-tools/dev-deployment-kogito-quarkus-blank-app",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/dev-deployment-kogito-quarkus-blank-app-image",
-        "target": "@kie-tools/maven-m2-repo-via-http-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/maven-m2-repo-via-http-image",
-        "target": "@kie-tools/image-builder",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/maven-m2-repo-via-http-image",
-        "target": "@kie-tools/root-env",
-        "weight": 1
-      },
-      {
         "source": "@kie-tools/dmn-feel-antlr4-parser",
         "target": "@kie-tools/dmn-marshaller",
         "weight": 1
@@ -1738,11 +1702,6 @@
       {
         "source": "@kie-tools/scesim-editor",
         "target": "@kie-tools/scesim-marshaller",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/extended-services",
-        "target": "@kie-tools/root-env",
         "weight": 1
       },
       {
@@ -1926,26 +1885,6 @@
         "weight": 1
       },
       {
-        "source": "@kie-tools/kie-sandbox-accelerator-quarkus",
-        "target": "@kie-tools/jbpm-quarkus-devui",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-distribution",
-        "target": "@kie-tools/cors-proxy-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-distribution",
-        "target": "@kie-tools/kie-sandbox-extended-services-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-distribution",
-        "target": "@kie-tools/kie-sandbox-webapp-image",
-        "weight": 1
-      },
-      {
         "source": "@kie-tools/kie-sandbox-extended-services-image",
         "target": "@kie-tools/extended-services-java",
         "weight": 1
@@ -1953,6 +1892,21 @@
       {
         "source": "@kie-tools/kie-sandbox-extended-services-image",
         "target": "@kie-tools/image-builder",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/kie-sandbox-helm-chart",
+        "target": "@kie-tools/cors-proxy-image",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/kie-sandbox-helm-chart",
+        "target": "@kie-tools/kie-sandbox-extended-services-image",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/kie-sandbox-helm-chart",
+        "target": "@kie-tools/kie-sandbox-webapp-image",
         "weight": 1
       },
       {
@@ -1962,102 +1916,7 @@
       },
       {
         "source": "@kie-tools/kie-sandbox-webapp-image",
-        "target": "@kie-tools/online-editor",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-webapp-image",
         "target": "@kie-tools/image-builder",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools-core/k8s-yaml-to-apiserver-requests",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools-core/kubernetes-bridge",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools-core/workspaces-git-fs",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/dmn-editor-envelope",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/form-dmn",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/kie-bc-editors",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/pmml-editor",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/unitables-dmn",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/cors-proxy",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/extended-services",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/extended-services-java",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/kie-sandbox-accelerator-quarkus",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/stunner-editors",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-helm-chart",
-        "target": "@kie-tools/cors-proxy-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-helm-chart",
-        "target": "@kie-tools/kie-sandbox-extended-services-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/kie-sandbox-helm-chart",
-        "target": "@kie-tools/kie-sandbox-webapp-image",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-core/kubernetes-bridge",
-        "target": "@kie-tools/cors-proxy-api",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/unitables-dmn",
-        "target": "@kie-tools/unitables",
         "weight": 1
       },
       {
@@ -2221,13 +2080,18 @@
         "weight": 1
       },
       {
-        "source": "@kie-tools/unitables",
-        "target": "@kie-tools/boxed-expression-component",
+        "source": "@kie-tools-core/kubernetes-bridge",
+        "target": "@kie-tools/cors-proxy-api",
         "weight": 1
       },
       {
-        "source": "@kie-tools/unitables",
-        "target": "@kie-tools/dmn-runner",
+        "source": "@kie-tools/maven-m2-repo-via-http-image",
+        "target": "@kie-tools/image-builder",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/maven-m2-repo-via-http-image",
+        "target": "@kie-tools/root-env",
         "weight": 1
       },
       {
@@ -2876,6 +2740,21 @@
         "weight": 1
       },
       {
+        "source": "@kie-tools/unitables",
+        "target": "@kie-tools/boxed-expression-component",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/unitables",
+        "target": "@kie-tools/dmn-runner",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/unitables-dmn",
+        "target": "@kie-tools/unitables",
+        "weight": 1
+      },
+      {
         "source": "vscode-extension-dashbuilder-editor",
         "target": "@kie-tools-core/vscode-extension",
         "weight": 1
@@ -3052,11 +2931,6 @@
     ["@kie-tools/dev-deployment-base-image", "packages/dev-deployment-base-image"],
     ["@kie-tools/dev-deployment-dmn-form-webapp", "packages/dev-deployment-dmn-form-webapp"],
     ["@kie-tools/dev-deployment-dmn-form-webapp-image", "packages/dev-deployment-dmn-form-webapp-image"],
-    ["@kie-tools/dev-deployment-kogito-quarkus-blank-app", "packages/dev-deployment-kogito-quarkus-blank-app"],
-    [
-      "@kie-tools/dev-deployment-kogito-quarkus-blank-app-image",
-      "packages/dev-deployment-kogito-quarkus-blank-app-image"
-    ],
     ["@kie-tools/dev-deployment-upload-service", "packages/dev-deployment-upload-service"],
     ["@kie-tools/dmn-editor", "packages/dmn-editor"],
     ["@kie-tools/dmn-editor-envelope", "packages/dmn-editor-envelope"],
@@ -3072,7 +2946,6 @@
     ["@kie-tools-core/envelope", "packages/envelope"],
     ["@kie-tools-core/envelope-bus", "packages/envelope-bus"],
     ["@kie-tools/eslint", "packages/eslint"],
-    ["@kie-tools/extended-services", "packages/extended-services"],
     ["@kie-tools/extended-services-api", "packages/extended-services-api"],
     ["@kie-tools/extended-services-java", "packages/extended-services-java"],
     ["extended-services-vscode-extension", "packages/extended-services-vscode-extension"],
@@ -3098,8 +2971,6 @@
     ["@kie-tools/kie-bc-editors", "packages/kie-bc-editors"],
     ["kie-editors-dev-vscode-extension", "packages/kie-editors-dev-vscode-extension"],
     ["@kie-tools/kie-editors-standalone", "packages/kie-editors-standalone"],
-    ["@kie-tools/kie-sandbox-accelerator-quarkus", "packages/kie-sandbox-accelerator-quarkus"],
-    ["@kie-tools/kie-sandbox-distribution", "packages/kie-sandbox-distribution"],
     ["@kie-tools/kie-sandbox-extended-services-image", "packages/kie-sandbox-extended-services-image"],
     ["@kie-tools/kie-sandbox-fs", "packages/kie-sandbox-fs"],
     ["@kie-tools/kie-sandbox-helm-chart", "packages/kie-sandbox-helm-chart"],
@@ -3120,7 +2991,6 @@
     ["@kie-tools/maven-m2-repo-via-http-image", "packages/maven-m2-repo-via-http-image"],
     ["@kie-tools-core/monaco-editor", "packages/monaco-editor"],
     ["@kie-tools-core/notifications", "packages/notifications"],
-    ["@kie-tools/online-editor", "packages/online-editor"],
     ["@kie-tools-core/operating-system", "packages/operating-system"],
     ["@osl/osl-data-index-ephemeral-image", "packages/osl-data-index-ephemeral-image"],
     ["@osl/osl-data-index-postgresql-image", "packages/osl-data-index-postgresql-image"],
