@@ -732,11 +732,6 @@
       },
       {
         "source": "@kie-tools-examples/process-compact-architecture",
-        "target": "@kie-tools/jbpm-quarkus-devui",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-examples/process-compact-architecture",
         "target": "@kie-tools/kogito-management-console",
         "weight": 1
       },
@@ -772,17 +767,7 @@
       },
       {
         "source": "@kie-tools/runtime-tools-management-console-webapp",
-        "target": "@kie-tools/runtime-tools-process-webapp-components",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/runtime-tools-management-console-webapp",
-        "target": "@kie-tools/runtime-tools-shared-webapp-components",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/runtime-tools-management-console-webapp",
-        "target": "@kie-tools/maven-base",
+        "target": "@kie-tools/jbpm-quarkus-devui",
         "weight": 1
       },
       {
@@ -792,17 +777,7 @@
       },
       {
         "source": "@kie-tools-examples/process-security",
-        "target": "@kie-tools/jbpm-quarkus-devui",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-examples/process-security",
         "target": "@kie-tools/kogito-management-console",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-examples/process-user-tasks-subsystem",
-        "target": "@kie-tools/jbpm-quarkus-devui",
         "weight": 1
       },
       {
@@ -843,6 +818,11 @@
       {
         "source": "@kie-tools/sonataflow-quarkus-devui",
         "target": "@kie-tools/serverless-workflow-dev-ui-webapp",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/serverless-workflow-dev-ui-webapp",
+        "target": "@kie-tools/runtime-tools-shared-enveloped-components",
         "weight": 1
       },
       {
@@ -2392,6 +2372,11 @@
       },
       {
         "source": "@kie-tools/sonataflow-management-console-webapp",
+        "target": "@kie-tools/runtime-tools-shared-enveloped-components",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/sonataflow-management-console-webapp",
         "target": "@kie-tools/runtime-tools-shared-webapp-components",
         "weight": 1
       },
@@ -2517,7 +2502,22 @@
       },
       {
         "source": "@kie-tools/runtime-tools-process-enveloped-components",
+        "target": "@kie-tools-core/monaco-editor",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/runtime-tools-process-enveloped-components",
         "target": "@kie-tools-core/react-hooks",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/runtime-tools-process-enveloped-components",
+        "target": "@kie-tools/i18n-common-dictionary",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/runtime-tools-process-enveloped-components",
+        "target": "@kie-tools/runtime-tools-components",
         "weight": 1
       },
       {
@@ -2527,7 +2527,7 @@
       },
       {
         "source": "@kie-tools/runtime-tools-process-enveloped-components",
-        "target": "@kie-tools/runtime-tools-shared-enveloped-components",
+        "target": "@kie-tools-core/webpack-base",
         "weight": 1
       },
       {
@@ -2557,12 +2557,22 @@
       },
       {
         "source": "@kie-tools/runtime-tools-swf-enveloped-components",
+        "target": "@kie-tools-core/monaco-editor",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/runtime-tools-swf-enveloped-components",
         "target": "@kie-tools/dashbuilder-client",
         "weight": 1
       },
       {
         "source": "@kie-tools/runtime-tools-swf-enveloped-components",
-        "target": "@kie-tools/runtime-tools-shared-enveloped-components",
+        "target": "@kie-tools/i18n-common-dictionary",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/runtime-tools-swf-enveloped-components",
+        "target": "@kie-tools/runtime-tools-components",
         "weight": 1
       },
       {
@@ -2613,6 +2623,11 @@
       {
         "source": "@kie-tools/serverless-logic-web-tools",
         "target": "@kie-tools/dashbuilder-editor",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/serverless-logic-web-tools",
+        "target": "@kie-tools/runtime-tools-shared-enveloped-components",
         "weight": 1
       },
       {
