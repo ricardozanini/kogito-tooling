@@ -342,7 +342,7 @@ bundle: kustomize install-operator-sdk ## Generate bundle manifests and metadata
 .PHONY: bundle-build
 BUNDLE_DESCRIPTOR = "images/bundle.yaml"
 bundle-build: ## Build the bundle image
-	cekit -v --descriptor $(BUNDLE_DESCRIPTOR) build ${build_options} $(BUILDER) --no-squash --build-arg SOURCE_DATE_EPOCH="$(shell git log -1 --pretty=%ct)"
+	cekit -v --descriptor $(BUNDLE_DESCRIPTOR) build ${build_options} $(BUILDER) --no-squash --platform=linux/amd64 --build-arg SOURCE_DATE_EPOCH="$(shell git log -1 --pretty=%ct)"
 ifneq ($(ignore_tag),true)
 	$(BUILDER) tag sonataflow-operator-bundle:latest $(BUNDLE_IMG)
 endif

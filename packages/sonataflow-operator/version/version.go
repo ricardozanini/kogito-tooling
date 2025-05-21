@@ -20,7 +20,7 @@ package version
 // Don't change it manually, use the make bump-version <version>
 const operatorVersion = "1.36.0"
 
-const tagVersion = "1.36.0"
+const tagVersion = "9.103.x-prod"
 
 // GetOperatorVersion gets the current operator version
 func GetOperatorVersion() string {

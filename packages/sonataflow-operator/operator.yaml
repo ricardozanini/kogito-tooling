@@ -28178,7 +28178,7 @@ data:
     under the License is distributed on an\n# \"AS IS\" BASIS, WITHOUT WARRANTIES
     OR CONDITIONS OF ANY\n# KIND, either express or implied.  See the License for
     the\n# specific language governing permissions and limitations\n# under the License.\n\nFROM
-    registry.redhat.io/openshift-serverless-1/logic-swf-builder-rhel8:1.36.0 AS builder\n\n#
+    quay.io/kubesmarts/incubator-kie-sonataflow-builder:9.103.x-prod AS builder\n\n#
     variables that can be overridden by the builder\n# To add a Quarkus extension
     to your application\nARG QUARKUS_EXTENSIONS\n# Args to pass to the Quarkus CLI
     add extension command\nARG QUARKUS_ADD_EXTENSION_ARGS\n# Additional java/mvn arguments
@@ -28230,13 +28230,13 @@ data:
     # Default image used internally by the Operator Managed Kaniko builder to create the executor pods
     kanikoExecutorImageTag: gcr.io/kaniko-project/executor:v1.9.0
     # The Jobs Service image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-    jobsServicePostgreSQLImageTag: "registry.redhat.io/openshift-serverless-1/logic-jobs-service-postgresql-rhel8:1.36.0"
-    jobsServiceEphemeralImageTag: "registry.redhat.io/openshift-serverless-1/logic-jobs-service-ephemeral-rhel8:1.36.0"
+    jobsServicePostgreSQLImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-postgresql:9.103.x-prod"
+    jobsServiceEphemeralImageTag: "quay.io/kubesmarts/incubator-kie-kogito-jobs-service-ephemeral:9.103.x-prod"
     # The Data Index image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-    dataIndexPostgreSQLImageTag: "registry.redhat.io/openshift-serverless-1/logic-data-index-postgresql-rhel8:1.36.0"
-    dataIndexEphemeralImageTag: "registry.redhat.io/openshift-serverless-1/logic-data-index-ephemeral-rhel8:1.36.0"
+    dataIndexPostgreSQLImageTag: "quay.io/kubesmarts/logic-data-index-postgresql-rhel8:9.103.x-prod"
+    dataIndexEphemeralImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-ephemeral:9.103.x-prod"
     # The Kogito PostgreSQL DB Migrator image to use (TBD: to replace with apache image)
-    dbMigratorToolImageTag: "registry.redhat.io/openshift-serverless-1/logic-db-migrator-tool-rhel8:1.36.0"
+    dbMigratorToolImageTag: "quay.io/kubesmarts/kie-kogito-db-migrator-tool:9.103.x-prod"
     # SonataFlow base builder image used in the internal Dockerfile to build workflow applications in preview profile
     # Order of precedence is:
     # 1. SonataFlowPlatform in the given namespace
@@ -28244,18 +28244,18 @@ data:
     # 3. The FROM in the Dockerfile in the operator's namespace "sonataflow-operator-builder-config" configMap.
     # If 1 or 2, the FROM tag will be replaced by the tag se there.
     # If empty the operator will use the default Apache Community one based on the current operator's version.
-    sonataFlowBaseBuilderImageTag: "registry.redhat.io/openshift-serverless-1/logic-swf-builder-rhel8:1.36.0"
+    sonataFlowBaseBuilderImageTag: "quay.io/kubesmarts/incubator-kie-sonataflow-builder:9.103.x-prod"
     # The image to use to deploy SonataFlow workflow images in devmode profile.
     # If empty the operator will use the default Apache Community one based on the current operator's version.
-    sonataFlowDevModeImageTag: "registry.redhat.io/openshift-serverless-1/logic-swf-devmode-rhel8:1.36.0"
+    sonataFlowDevModeImageTag: "quay.io/kubesmarts/incubator-kie-sonataflow-devmode:9.103.x-prod"
     # The default name of the builder configMap in the operator's namespace
     builderConfigMapName: "logic-operator-rhel8-builder-config"
     # Quarkus extensions required for workflows persistence. These extensions are used by the SonataFlow build system,
     # in cases where the workflow being built has configured postgresql persistence.
     postgreSQLPersistenceExtensions:
-      - groupId: com.redhat.quarkus.platform
+      - groupId: io.quarkus.platform
         artifactId: quarkus-jdbc-postgresql
-      - groupId: com.redhat.quarkus.platform
+      - groupId: io.quarkus.platform
         artifactId: quarkus-agroal
       - groupId: org.kie
         artifactId: kie-addons-quarkus-persistence-jdbc
@@ -28322,7 +28322,7 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-          image: registry.redhat.io/openshift-serverless-1/openshift-serverless-1-logic-rhel8-operator@sha256:ffae74d76431b428341abfe8b8b704323261c224ff9140a2ea2782c0524f222f
+          image: quay.io/kubesmarts/incubator-kie-sonataflow-operator:9.103.x-prod
           livenessProbe:
             httpGet:
               path: /healthz
@@ -28357,7 +28357,7 @@ spec:
             - --upstream=http://127.0.0.1:8080/
             - --logtostderr=true
             - --v=0
-          image: gcr.io/kubebuilder/kube-rbac-proxy:v0.13.1
+          image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:4564ca3dc5bac80d6faddaf94c817fbbc270698a9399d8a21ee1005d85ceda56
           name: kube-rbac-proxy
           ports:
             - containerPort: 8443
