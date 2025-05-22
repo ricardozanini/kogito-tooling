@@ -116,6 +116,8 @@ jobs:
           DASHBUILDER__viewerImageAccount: "kubesmarts"
           SONATAFLOW_OPERATOR__registry: "quay.io"
           SONATAFLOW_OPERATOR__account: "kubesmarts"
+          KOGITO_DB_MIGRATOR_TOOL_IMAGE__registry: "quay.io"
+          KOGITO_DB_MIGRATOR_TOOL_IMAGE__account: "kubesmarts"
 
         run: >-
           eval "pnpm ${{ vars.IMAGES_UPSTREAM_PNPM_FILTER }} --workspace-concurrency=1 build:prod"
