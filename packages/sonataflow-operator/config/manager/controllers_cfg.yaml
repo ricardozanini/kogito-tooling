@@ -28,7 +28,7 @@ kanikoExecutorImageTag: gcr.io/kaniko-project/executor:v1.9.0
 jobsServicePostgreSQLImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-postgresql:9.103.x-prod"
 jobsServiceEphemeralImageTag: "quay.io/kubesmarts/incubator-kie-kogito-jobs-service-ephemeral:9.103.x-prod"
 # The Data Index image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-dataIndexPostgreSQLImageTag: "quay.io/kubesmarts/logic-data-index-postgresql-rhel8:9.103.x-prod"
+dataIndexPostgreSQLImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-postgresql:9.103.x-prod"
 dataIndexEphemeralImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-ephemeral:9.103.x-prod"
 # The Kogito PostgreSQL DB Migrator image to use (TBD: to replace with apache image)
 dbMigratorToolImageTag: "quay.io/kubesmarts/kie-kogito-db-migrator-tool:9.103.x-prod"
