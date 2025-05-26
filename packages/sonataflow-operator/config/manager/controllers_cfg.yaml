@@ -25,7 +25,7 @@ kanikoDefaultWarmerImageTag: gcr.io/kaniko-project/warmer:v1.9.0
 # Default image used internally by the Operator Managed Kaniko builder to create the executor pods
 kanikoExecutorImageTag: gcr.io/kaniko-project/executor:v1.9.0
 # The Jobs Service image to use, if empty the operator will use the default Apache Community one based on the current operator's version
-jobsServicePostgreSQLImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-postgresql:9.103.x-prod"
+jobsServicePostgreSQLImageTag: "quay.io/kubesmarts/incubator-kie-kogito-jobs-service-postgresql:9.103.x-prod"
 jobsServiceEphemeralImageTag: "quay.io/kubesmarts/incubator-kie-kogito-jobs-service-ephemeral:9.103.x-prod"
 # The Data Index image to use, if empty the operator will use the default Apache Community one based on the current operator's version
 dataIndexPostgreSQLImageTag: "quay.io/kubesmarts/incubator-kie-kogito-data-index-postgresql:9.103.x-prod"
@@ -44,7 +44,7 @@ sonataFlowBaseBuilderImageTag: "quay.io/kubesmarts/incubator-kie-sonataflow-buil
 # If empty the operator will use the default Apache Community one based on the current operator's version.
 sonataFlowDevModeImageTag: "quay.io/kubesmarts/incubator-kie-sonataflow-devmode:9.103.x-prod"
 # The default name of the builder configMap in the operator's namespace
-builderConfigMapName: "logic-operator-rhel8-builder-config"
+builderConfigMapName: "sonataflow-operator-builder-config"
 # Quarkus extensions required for workflows persistence. These extensions are used by the SonataFlow build system,
 # in cases where the workflow being built has configured postgresql persistence.
 postgreSQLPersistenceExtensions:
