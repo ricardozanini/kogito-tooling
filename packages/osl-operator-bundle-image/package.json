@@ -30,7 +30,7 @@
     "manifests:copy:resources": "cp -R resources/config dist/",
     "manifests:update": ". ./node_modules/@osl/redhat-python-venv/venv/bin/activate && python resources/scripts/update_manifests.py $(build-env oslOperatorBundleImage.namespace) $(build-env oslOperatorBundleImage.namePrefix) $(build-env oslOperatorBundleImage.proxyImage)"
   },
-  "devDependencies": {
+  "dependencies": {
     "@kie-tools/root-env": "workspace:*",
     "@kie-tools/sonataflow-image-common": "workspace:*",
     "@kie-tools/sonataflow-operator": "workspace:*",
@@ -44,7 +44,9 @@
     "@osl/osl-swf-builder-image": "workspace:*",
     "@osl/osl-swf-devmode-image": "workspace:*",
     "@osl/redhat-env": "workspace:*",
-    "@osl/redhat-python-venv": "workspace:*",
+    "@osl/redhat-python-venv": "workspace:*"
+  },
+  "devDependencies": {
     "cross-env": "^7.0.3",
     "replace-in-file": "^7.1.0",
     "rimraf": "^3.0.2",
