@@ -24,6 +24,9 @@ jobs:
           token: ${{ secrets.KIE1_TOKEN }}
           ref: main
 
+      - name: "Setup Environment"
+        uses: ./.github/actions/setup-env
+
       - name: Setup Environment Variables
         run: bash ./.github/supporting-files/ci/osl/export_vars.sh
         shell: bash
