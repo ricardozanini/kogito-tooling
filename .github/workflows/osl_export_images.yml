@@ -28,7 +28,6 @@ jobs:
         uses: ./.github/actions/setup-env
 
       - name: Setup pnpm
-        # Required in order to run pnpm inside export_vars.sh
         run: pnpm bootstrap --no-frozen-lockfile
         shell: bash
 
@@ -37,7 +36,6 @@ jobs:
         shell: bash
 
       - name: Run pnpm bootstrap
-        # Required to run again in order to modify the packages accordingly to the exported vars
         run: pnpm bootstrap --no-frozen-lockfile
         shell: bash
 
