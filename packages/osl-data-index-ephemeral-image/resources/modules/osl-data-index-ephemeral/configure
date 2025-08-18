@@ -30,5 +30,5 @@ cp -v "${ADDED_DIR}"/kogito-app-launch.sh "${KOGITO_HOME}"
 chmod +x-w "${KOGITO_HOME}"/kogito-app-launch.sh
 
 # Unzip the app
-mkdir -p /tmp/scripts/org.kie.kogito.dataindex.common/added
-unzip -q "${SOURCES_DIR}/kogito-data-index-webapp-image-build.zip" -d "/tmp/scripts/org.kie.kogito.dataindex.common/added/kogito-data-index-webapp"
+mkdir -p "${KOGITO_DATA_INDEX_COMMON_SCRIPT_PATH}/added"
+unzip -q "${SOURCES_DIR}/kogito-data-index-webapp-image-build.zip" -d "${KOGITO_DATA_INDEX_COMMON_SCRIPT_PATH}/added/kogito-data-index-webapp"
