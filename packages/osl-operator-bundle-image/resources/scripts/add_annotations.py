@@ -41,7 +41,7 @@ def merge_annotations():
         # Add the source annotations to the end of destination annotations
         dest_annotations[key] = value
 
-    last_key = list(dest_annotations.keys())[-1]
+    last_key = list(dest_annotations.keys())[-2]
     dest_annotations.yaml_set_comment_before_after_key(last_key, before="Additional Red Hat annotations", indent=2)
 
     # Write back the modified data to the destination file, preserving formatting
